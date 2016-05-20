@@ -39,10 +39,11 @@
 			</div><!-- /header -->
 
 			<div data-role="content" style="text-shadow: none">
-				<p>
+				<span style="font-weight:lighter; font-size:smaller">Your current location id</span> 
+				<p style="font-weight:lighter; font-size:smaller">
 					<b style="color: green">Long : </b><span id="long" style="color: green"></span>
 				</p>
-				<p>
+				<p style="font-weight:lighter; font-size:smaller">
 					<b style="color: green">Lat : </b><span id="lat" style="color: green"></span>
 				</p>
 				<hr style="border: 1px solid silver;"/>
@@ -52,11 +53,11 @@
 				<p tabindex="0" id="displayArea" style="display:none;  background: #DDF0F8;border-radius:25px; padding: 10px; font-size:smaller">
 
 				</p>
-				<button id="updateDetails">
-					Update Location
-				</button>
 				<button style="background: green" id="loadDetails">
 					Load Details
+				</button>
+				<button id="updateDetails">
+					Update Location
 				</button>
 			</div><!-- /content -->
 			<div style="text-align: center;">
