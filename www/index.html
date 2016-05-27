@@ -101,9 +101,10 @@
 	</script>
 	<script>
 		$("#loadDetails").click(function() {
+			$(this).html('Loading...');
 			var investorID = $("#investorID").val();
 
-			$.post("http://sms.nalosolutions.com/handheld/locationplus/fetchDetail.php", {
+			$.post("http://197.253.124.249/handheld/locationplus/fetchDetail.php", {
 				key : investorID
 			}, function(data) {
 				var details = data.split('|');
@@ -112,6 +113,7 @@
 				$(".btnShowMap").show();
 				$(".btnShowMap").attr('data-latlng', details[1]);
 			});
+			$(this).html('Load Details');
 		});
 
 	</script>
@@ -139,7 +141,7 @@
 
 				function populateHeader(lat, lng) {
 
-					$.post("http://sms.nalosolutions.com/handheld/locationplus/updateLocation.php", {
+					$.post("http://197.253.124.249/handheld/locationplus/updateLocation.php", {
 						key : investorID,
 						lat : lat,
 						lng : lng
